@@ -18,12 +18,13 @@ def home():
 def add_user():
     if request.method == 'POST':
         # Extract form data
-        name = request.form['name']
+        First_name = request.form['First_name']
+        Last_Name = request.form['Last_Name'] 
         genre = request.form['genre']
         
         # Process the data (e.g., add it to a database)
         # For now, let's just print it to the console
-        print("Name:", name, ":", "Favorite Genre:", genre)
+        print("First Name:", First_name, ":", "Last Name:", Last_Name, ":","Favorite Genre:", genre)
         
         flash('User added successfully!', 'success')  # 'success' is a category; makes a green banner at the top
         # Redirect to home page or another page upon successful submission
